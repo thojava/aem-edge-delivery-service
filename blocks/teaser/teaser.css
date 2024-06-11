@@ -1,0 +1,29 @@
+.teaser-container {
+    background-color: #27314e;
+    display: flex;
+}
+
+.teaser > div {
+    display: flex;
+}
+
+.teaser-content {
+    width: 50%;
+    color: white;
+}
+
+.teaser-image {
+    width: 50%;
+}
+
+a.teaser-cta {
+    background-color: #4a6cf7;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+
+    .icon {
+        display: ruby;
+        margin-left: 8px;
+    }
+}
