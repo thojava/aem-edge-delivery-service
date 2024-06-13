@@ -12,7 +12,7 @@
 
 :root {
   /* colors */
-  --link-color: #035fe6;
+  --link-color: #4A6CF7;
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
@@ -20,9 +20,9 @@
   --text-color: black;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --body-font-family: 'Inter', sans-serif;
+  --heading-font-family: 'Lexend', sans-serif;
+  --fixed-font-family: var(--body-font-family);
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -42,7 +42,7 @@
 }
 
 @font-face {
-  font-family: roboto-fallback;
+  font-family: var(--body-font-family);
   size-adjust: 100.06%;
   ascent-override: 95%;
   src: local('Arial');
@@ -133,7 +133,7 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
+  font-family: var(--heading-font-family);
   display: inline-block;
   box-sizing: border-box;
   text-decoration: none;
@@ -141,7 +141,7 @@ a.button:any-link, button {
   padding: 5px 30px;
   text-align: center;
   font-style: normal;
-  font-weight: 600;
+  font-size: 16px;  
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
@@ -149,7 +149,7 @@ a.button:any-link, button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-radius: 30px;
+  border-radius: 4px;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
