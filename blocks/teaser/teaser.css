@@ -10,20 +10,32 @@
 .teaser-content {
     width: 50%;
     color: white;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+}
+
+.teaser-description {
+    font-size: 16px;
+    font-weight: 700;
+    color: #79808a;
+    margin-bottom: 48px;
+    margin-top: 0;
 }
 
 .teaser-image {
     width: 50%;
 }
 
-a.teaser-cta {
+a.button.teaser-cta {
     background-color: #4a6cf7;
     color: white;
     padding: 12px 24px;
     border-radius: 5px;
+    width: 50%;
 
     .icon {
-        display: ruby;
-        margin-left: 8px;
+        margin-left: 12px;
     }
 }

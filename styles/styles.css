@@ -134,22 +134,31 @@ a:hover {
 /* buttons */
 a.button:any-link, button {
   font-family: var(--heading-font-family);
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: space-between;
   box-sizing: border-box;
   text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
+  padding: 14px 30px;
   text-align: center;
   font-style: normal;
   font-size: 16px;  
+  line-height: 24px;
   cursor: pointer;
   color: var(--background-color);
   background-color: var(--link-color);
-  margin: 16px 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 4px;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+  }
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
@@ -192,7 +201,7 @@ main .section {
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 64px 60px;
   }
 }
 
