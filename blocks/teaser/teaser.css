@@ -3,30 +3,47 @@
     display: flex;
 }
 
-.teaser > div {
+.teaser>div {
     display: flex;
+    flex-direction: column;
 
-    @media (width <= 992px) {
-        display: flex;
-        flex-direction: column;
+    @media (width >=900px) {
+        flex-direction: row;
     }
 }
 
 .teaser-content {
-    width: 50%;
+    width: 100%;
     color: white;
-    padding-right: 32px;
+    margin-right: 60px;
+    text-align: center;
 
-    @media (width <= 992px) {
-        width: 100%;
+    @media (width >=900px) {
+        width: 50%;
+        text-align: left;
+        padding-top: 32px;
     }
 
     h1 {
         margin-bottom: 20px;
-        font-size: 50px;        
+        font-size: 22px;
         font-feature-settings: normal;
         position: relative;
-        line-height: 60px;
+        line-height: 32px;
+
+        @media (width >=900px) {
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+
+        @media (width >=900px) {
+            display: block;
+        }
     }
 }
 
@@ -35,14 +52,15 @@
     padding: 10px 20px 10px 36px;
     border-radius: 9999px;
     position: relative;
+    bottom: 32px;
 
-    &:before {
+    &::before {
         content: "";
         display: block;
         position: absolute;
         width: 0.5rem;
         height: 0.5rem;
-        background-color: rgb(74, 108, 247);
+        background-color: #4a6cf7;
         border-radius: 50%;
         top: 16px;
         left: 16px;
@@ -58,10 +76,11 @@
 }
 
 .teaser-image {
-    width: 50%;
+    width: 100%;
 
-    @media (width <= 992px) {
-        width: 100%;
+    @media (width >=900px) {
+        width: 50%;
+        margin-left: 24px;
     }
 
     p {
@@ -71,35 +90,35 @@
         picture {
             &:first-child {
                 position: absolute;
-                right: 0px;
+                right: 0;
             }
 
             &:last-child {
                 position: absolute;
                 top: 136px;
-                left: -20px;
+                left: 0;
                 z-index: 0;
 
-                @media (width <= 576px) {
-                    left: 0px;
+                @media (width >=600px) {
+                    left: -40px;
                 }
 
-                &:before {
+                &::before {
                     display: block;
                     position: absolute;
                     content: "";
                     width: 350px;
                     height: 420px;
                     left: 20px;
-                    top:-24px;
+                    top: -24px;
                     z-index: -1;
-                    background-color: rgba(255, 255, 255, 0.1);
+                    background-color: #ffffff10;
                     backdrop-filter: blur(6px);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border: 1px solid #ffffff10;
                 }
 
-                @media (width >= 768px) {
-                    &:after {
+                @media (width >=768px) {
+                    &::after {
                         content: "";
                         background: url("/icons/ball.svg");
                         opacity: 0.9;
@@ -107,7 +126,7 @@
                         height: 120px;
                         position: absolute;
                         bottom: 10px;
-                        right: -76px;
+                        right: -40px;
                         z-index: -2;
                     }
                 }
@@ -121,7 +140,11 @@ a.button.teaser-cta {
     color: white;
     padding: 12px 24px;
     border-radius: 5px;
-    width: 50%;
+    width: 70%;
+
+    @media (width >=900px) {
+        width: 50%;
+    }
 
     .icon {
         margin-left: 12px;

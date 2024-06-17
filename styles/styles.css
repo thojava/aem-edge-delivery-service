@@ -131,8 +131,14 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
 /* buttons */
-a.button:any-link, button {
+button, a.button:any-link {
   font-family: var(--heading-font-family);
   display: flex;
   align-items: center;
@@ -183,12 +189,6 @@ main img {
   height: auto;
 }
 
-.icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-}
-
 .icon img {
   height: 100%;
   width: 100%;
@@ -201,7 +201,7 @@ main .section {
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 60px;
+    padding: 64px 80px;
   }
 }
 

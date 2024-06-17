@@ -1,38 +1,8 @@
-export default async function decorate(block) {
-    const divs = block.querySelectorAll(':scope > div > div');
-    const teaserContent = divs[0];
-    teaserContent.classList.add('teaser-content');
-    teaserContent.querySelectorAll('a').forEach((a) => {
-        a.classList.add('teaser-cta');
-    });
-    teaserContent.querySelector('p').classList.add('teaser-description');
-    divs[1].classList.add('teaser-image');
-
-    teaserContent.querySelector('u').classList.add('txt-type');
-    teaserContent.querySelector('code').classList.add('teaser-headline');
-
-    initTypeWriter();
-}
-
-// Init App
-function initTypeWriter() {
-    const teaserSection = document.querySelector(".section.teaser-container");
-    const txtElement = document.querySelectorAll(".txt-type");
-    if (txtElement.length) {
-        const txtElement = document.querySelector('.txt-type');
-        const words = teaserSection.getAttribute("data-words").split(',');
-        const wait = teaserSection.getAttribute("data-wait");
-        // Init TypeWriter
-        new TypeWriter(txtElement, words, wait);
-    }
-    console.log("Init teaser type writer");
-}
-
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
         this.txtElement = txtElement;
         this.words = words;
-        this.txt = "";
+        this.txt = '';
         this.wordIndex = 0;
         this.wait = parseInt(wait, 10);
         this.type();
@@ -55,7 +25,7 @@ class TypeWriter {
         }
 
         // Insert txt into element
-        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+        this.txtElement.innerHTML = `<span class='txt'>${this.txt}</span>`;
 
         // Initial Type Speed
         let typeSpeed = 300;
@@ -70,14 +40,42 @@ class TypeWriter {
             typeSpeed = this.wait;
             // Set delete to true
             this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
+        } else if (this.isDeleting && this.txt === '') {
             this.isDeleting = false;
             // Move to next word
-            this.wordIndex++;
+            this.wordIndex += 1;
             // Pause before start typing
             typeSpeed = 500;
         }
 
         setTimeout(() => this.type(), typeSpeed);
     }
+}
+
+function initTypeWriter() {
+    const teaserSection = document.querySelector('.section.teaser-container');
+    const txtElement = document.querySelectorAll('.txt-type');
+    if (txtElement.length) {
+        const words = teaserSection.getAttribute('data-words').split(',');
+        const wait = teaserSection.getAttribute('data-wait');
+        // Init TypeWriter
+        const typeWriter = new TypeWriter(document.querySelector('.txt-type'), words, wait);
+        console.log(typeWriter);
+    }
+}
+
+export default async function decorate(block) {
+    const divs = block.querySelectorAll(':scope > div > div');
+    const teaserContent = divs[0];
+    teaserContent.classList.add('teaser-content');
+    teaserContent.querySelectorAll('a').forEach((a) => {
+        a.classList.add('teaser-cta');
+    });
+    teaserContent.querySelector('p').classList.add('teaser-description');
+    divs[1].classList.add('teaser-image');
+
+    teaserContent.querySelector('u').classList.add('txt-type');
+    teaserContent.querySelector('code').classList.add('teaser-headline');
+
+    initTypeWriter();
 }
