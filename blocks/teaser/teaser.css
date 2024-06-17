@@ -5,14 +5,47 @@
 
 .teaser > div {
     display: flex;
+
+    @media (width <= 992px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .teaser-content {
     width: 50%;
     color: white;
+    padding-right: 32px;
+
+    @media (width <= 992px) {
+        width: 100%;
+    }
 
     h1 {
         margin-bottom: 20px;
+        font-size: 50px;        
+        font-feature-settings: normal;
+        position: relative;
+        line-height: 60px;
+    }
+}
+
+.teaser-headline {
+    background-color: #ffffff10;
+    padding: 10px 20px 10px 36px;
+    border-radius: 9999px;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: rgb(74, 108, 247);
+        border-radius: 50%;
+        top: 16px;
+        left: 16px;
     }
 }
 
@@ -26,6 +59,61 @@
 
 .teaser-image {
     width: 50%;
+
+    @media (width <= 992px) {
+        width: 100%;
+    }
+
+    p {
+        position: relative;
+        height: 560px;
+
+        picture {
+            &:first-child {
+                position: absolute;
+                right: 0px;
+            }
+
+            &:last-child {
+                position: absolute;
+                top: 136px;
+                left: -20px;
+                z-index: 0;
+
+                @media (width <= 576px) {
+                    left: 0px;
+                }
+
+                &:before {
+                    display: block;
+                    position: absolute;
+                    content: "";
+                    width: 350px;
+                    height: 420px;
+                    left: 20px;
+                    top:-24px;
+                    z-index: -1;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(6px);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                }
+
+                @media (width >= 768px) {
+                    &:after {
+                        content: "";
+                        background: url("/icons/ball.svg");
+                        opacity: 0.9;
+                        width: 120px;
+                        height: 120px;
+                        position: absolute;
+                        bottom: 10px;
+                        right: -76px;
+                        z-index: -2;
+                    }
+                }
+            }
+        }
+    }
 }
 
 a.button.teaser-cta {
@@ -37,5 +125,9 @@ a.button.teaser-cta {
 
     .icon {
         margin-left: 12px;
+    }
+
+    &:hover {
+        opacity: 0.9;
     }
 }

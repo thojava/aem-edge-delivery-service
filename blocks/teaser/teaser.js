@@ -9,6 +9,7 @@ export default async function decorate(block) {
     divs[1].classList.add('teaser-image');
 
     teaserContent.querySelector('u').classList.add('txt-type');
+    teaserContent.querySelector('code').classList.add('teaser-headline');
 
     initTypeWriter();
 }
