@@ -1,7 +1,16 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+  background-color: rgb(17, 23, 34);
+  font-size: 16px;
+  color: rgb(121, 128, 138);
+}
+
+footer a:any-link {
+  color: rgb(121, 128, 138);
+}
+
+footer a:any-link:hover {
+  color: rgb(74, 108, 247);
 }
 
 footer .footer {
@@ -11,4 +20,12 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+}
+
+@media (width >= 900px) {
+  footer .section .default-content-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
