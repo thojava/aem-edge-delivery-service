@@ -301,3 +301,7 @@ header nav .nav-brand .default-content-wrapper a:hover {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+.icon-search {
+  display: none;
+}
