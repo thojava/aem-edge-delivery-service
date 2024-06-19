@@ -4,6 +4,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  padding-top: 20px;
 }
 
 header nav {
@@ -19,6 +20,36 @@ header nav {
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+}
+
+header .nav-wrapper .nav-brand img {
+  height: 68px;
+  margin-top: 4px;
+}
+
+header .nav-wrapper .nav-tools ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+header .nav-wrapper .nav-tools ul > li:first-child {
+  background-color: #4a6cf7;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+header .nav-wrapper .nav-tools ul > li:first-child:hover {
+  opacity: 0.9;
+}
+
+header .nav-wrapper .nav-tools ul > li:last-child {
+  padding-top: 10px;
+  cursor: pointer;
 }
 
 header nav[aria-expanded="true"] {
@@ -162,7 +193,7 @@ header nav .nav-sections {
 }
 
 header nav[aria-expanded="true"] .nav-sections {
-  display: block;
+  display: flex;
   visibility: visible;
   align-self: start;
 }
@@ -223,7 +254,7 @@ header nav .nav-sections .default-content-wrapper {
   }
 
   header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
-    top: unset;
+    top: 12px;
     bottom: .5em;
     transform: rotate(315deg);
     color: rgb(255, 255, 255);
@@ -238,12 +269,15 @@ header nav .nav-sections .default-content-wrapper {
     gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);
+    margin-top: 20px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
     font-weight: 500;
+    cursor: pointer;
+    padding-bottom: 20px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -251,7 +285,8 @@ header nav .nav-sections .default-content-wrapper {
     position: relative;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded="true"] > ul {
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded="true"] > ul,
+  header nav .nav-sections .nav-drop[aria-expanded="false"]:hover > ul {
     display: block;
     position: absolute;
     left: -1em;
