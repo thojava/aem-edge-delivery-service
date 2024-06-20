@@ -1,16 +1,16 @@
 footer {
   padding: 2rem;
-  background-color: rgb(17, 23, 34);
+  background-color: 	#111722;
   font-size: 16px;
-  color: rgb(121, 128, 138);
+  color: 	#79808a;
 }
 
 footer a:any-link {
-  color: rgb(121, 128, 138);
+  color: 	#79808a;
 }
 
 footer a:any-link:hover {
-  color: rgb(74, 108, 247);
+  color: #4a6cf7;
 }
 
 footer .footer {
@@ -21,6 +21,10 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+
+footer .section .default-content-wrapper ul {
+  list-style: none;
+} 
 
 @media (width >= 900px) {
   footer .section .default-content-wrapper{
