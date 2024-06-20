@@ -10,7 +10,7 @@ footer a:any-link {
 }
 
 footer a:any-link:hover {
-  color: #4a6cf7;
+  color: var(--link-color);
 }
 
 footer .footer {

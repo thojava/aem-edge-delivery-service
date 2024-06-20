@@ -179,6 +179,8 @@ header nav[aria-expanded="true"] .nav-sections {
   display: flex;
   visibility: visible;
   justify-content: center;
+  text-align: center;
+  margin-top: -20px;
 }
 
 header nav .nav-sections ul  {
@@ -192,6 +194,11 @@ header nav .nav-sections ul > li {
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  margin-top: 20px;
+}
+
+header nav .nav-sections ul > li[aria-expanded="true"] {
+  color: var(--link-color);
 }
 
 header nav .nav-sections ul > li > ul {
@@ -253,6 +260,17 @@ header nav .nav-sections .nav-drop[aria-expanded="true"]::after {
 
 header nav .nav-sections .nav-drop[aria-expanded="true"] > ul > li {
   color: #79808a;
+}
+
+header nav .nav-sections .button-container {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 40px;
+
+  @media (width >= 900px) {
+    right: 80px;
+    top: 30px;
+  }
 }
 
 header .nav-wrapper .nav-tools ul > li:first-child:hover {

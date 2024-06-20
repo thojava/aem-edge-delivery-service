@@ -60,7 +60,7 @@
         position: absolute;
         width: 0.5rem;
         height: 0.5rem;
-        background-color: #4a6cf7;
+        background-color: var(--link-color);
         border-radius: 50%;
         top: 16px;
         left: 16px;
@@ -136,7 +136,7 @@
 }
 
 a.button.teaser-cta {
-    background-color: #4a6cf7;
+    background-color: var(--link-color);
     color: white;
     padding: 12px 24px;
     border-radius: 5px;
