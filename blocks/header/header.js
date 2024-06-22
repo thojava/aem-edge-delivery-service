@@ -146,3 +146,15 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+
+window.addEventListener('scroll', () => {
+  const headerElement = document.querySelectorAll('header .nav-wrapper');
+  if (headerElement != null && headerElement.length > 0) {
+    const headerNav = headerElement[0];
+    if (document.documentElement.scrollTop > 50) {
+      headerNav.classList.add('header-active');
+    } else {
+      headerNav.classList.remove('header-active');
+    }
+  }
+});
