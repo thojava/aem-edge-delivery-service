@@ -74,6 +74,15 @@ footer .section .default-content-wrapper > ul > li > ul > li {
   &:not(:has(a)):hover {
     color: #fff;
   }
+
+  code {
+    background-color: var(--link-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 16px;
+    padding: 4px 8px;
+  }
 }
 
 @media (width >= 900px) {
