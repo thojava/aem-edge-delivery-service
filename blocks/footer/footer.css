@@ -3,6 +3,11 @@ footer {
   background-color: 	#111722;
   font-size: 16px;
   color: 	#79808a;
+
+  @media (width >= 900px) {
+    padding-left: var(--section-padding-left-right);
+    padding-right: var(--section-padding-left-right);
+  }
 }
 
 footer a:any-link {

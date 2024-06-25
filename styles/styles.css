@@ -39,6 +39,9 @@
 
   /* nav height */
   --nav-height: 80px;
+
+  /* blocks */
+  --section-padding-left-right: 80px;
 }
 
 @font-face {
@@ -201,7 +204,7 @@ main .section {
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 80px;
+    padding: 64px var(--section-padding-left-right);
   }
 }
 
