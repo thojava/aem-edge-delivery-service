@@ -27,7 +27,7 @@ export default async function decorate(block) {
       tabpanel.lastElementChild.innerHTML = `<p>${tabpanel.lastElementChild.innerHTML}</p>`;
     }
     const picture = tabpanel.querySelector('picture');
-    if(picture) {
+    if (picture) {
       picture.parentNode.className = 'tab-picture';
     }
 

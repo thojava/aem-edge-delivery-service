@@ -58,9 +58,8 @@ function initTypeWriter() {
     if (txtElement.length) {
         const words = teaserSection.getAttribute('data-words').split(',');
         const wait = teaserSection.getAttribute('data-wait');
-        // Init TypeWriter
-        const typeWriter = new TypeWriter(document.querySelector('.txt-type'), words, wait);
-        console.log(typeWriter);
+        /* eslint-disable no-new */
+        new TypeWriter(document.querySelector('.txt-type'), words, wait);
     }
 }
 
