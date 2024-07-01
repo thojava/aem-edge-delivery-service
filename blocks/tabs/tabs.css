@@ -1,0 +1,118 @@
+.tabs .tabs-list {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tabs .tabs-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #4b4e56;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: unset;
+  text-align: initial;
+  text-overflow: unset;
+  overflow: unset;
+  white-space: unset;
+  transition: background-color 0.2s;
+
+  p {
+    color: white;
+  }
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+  border-bottom-color: var(--link-color);
+}
+
+.tabs .tabs-list button:hover {
+  border-bottom-color: var(--link-color);
+}
+
+.tabs .tabs-panel {
+  margin-top: -1px;
+  padding: 40px 16px 0 16px;
+  overflow: auto;
+  background-image: url('/icons/background.svg');
+}
+
+.tabs .tabs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs-container {
+  color: white;
+
+  .default-content-wrapper {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-color);
+  }
+}
+
+.tab-picture {
+  position: relative;
+  height: 560px;
+
+  picture {
+    &:first-child {
+      position: absolute;
+      right: 0;
+    }
+
+    &:last-child {
+      position: absolute;
+      top: 80px;
+      right: 0;
+      z-index: 0;
+
+      @media (width >=600px) {
+        left: -40px;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 350px;
+        height: 400px;
+        right: 20px;
+        top: -20px;
+        z-index: -1;
+        background-color: #ffffff10;
+        backdrop-filter: blur(6px);
+        border: 1px solid #ffffff10;
+      }
+
+      &::after {
+        content: '';
+        background: url('/icons/wave.svg');
+        width: 72px;
+        height: 38px;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 0;
+      }
+    }
+  }
+}
