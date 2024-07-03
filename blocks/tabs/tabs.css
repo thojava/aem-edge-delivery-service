@@ -1,15 +1,14 @@
 .tabs-container {
   color: white;
 
-  .default-content-wrapper {
-    margin-bottom: 48px;
-    text-align: center;
-  }
-
   h2 {
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 20px;
+
+    @media (width >=900px) {
+      font-size: 40px;
+    }
   }
 
   p {
@@ -17,16 +16,70 @@
     line-height: 24px;
     color: var(--text-color);
   }
+
+  .default-content-wrapper {
+    margin-bottom: 48px;
+    text-align: center;
+
+    h3 {
+      font-size: 40px;
+      font-weight: 800;
+      -webkit-text-fill-color: transparent;
+      opacity: 0.2;
+      background: linear-gradient(180deg, #ffffff40 0%, #fff0 100%);
+      font-family: var(--body-font-family);
+      line-height: 40px;
+      margin-bottom: 0;
+      display: inline;
+      padding: 0 32px;
+
+      @media (width >=900px) {
+        font-size: 95px;
+        font-weight: 400;
+        line-height: 140px;
+      }
+    }
+
+    h2 {
+      @media (width >=900px) {
+        font-size: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 570px;
+      }
+    }
+
+    p {
+      @media (width >=900px) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 570px;
+      }
+    }
+  }
+}
+
+.tabs-wrapper {
+  background-image: url('/icons/background.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  @media (width >=900px) {
+    padding: 0 70px;
+  }
 }
 
 .tabs .tabs-list {
   display: flex;
   max-width: 100%;
   overflow-x: auto;
+
+  @media (width >=900px) {
+    justify-content: space-around;
+  }
 }
 
 .tabs .tabs-list button {
-  flex: 0 0 max-content;
   margin: 0;
   border: 0;
   border-radius: 0;
@@ -46,6 +99,11 @@
   p {
     color: white;
   }
+
+  @media (width >=900px) {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .tabs .tabs-list button[aria-selected='true'] {
@@ -58,9 +116,14 @@
 
 .tabs .tabs-panel {
   margin-top: -1px;
-  padding: 40px 16px 0;
+  padding: 40px 20px 0;
   overflow: auto;
-  background-image: url('/icons/background.svg');
+
+  @media (width >=900px) {
+    display: flex;
+    width: 65%;
+    margin-left: -20px;
+  }
 }
 
 .tabs .tabs-panel[aria-hidden='true'] {
@@ -70,6 +133,16 @@
 .tab-picture {
   position: relative;
   height: 560px;
+
+  @media (width >=900px) {
+    width: 50%;
+    padding: 0 16px;
+
+    & + div {
+      width: 50%;
+      padding-left: 32px;
+    }
+  }
 
   picture {
     &:first-child {
@@ -82,10 +155,6 @@
       top: 80px;
       right: 0;
       z-index: 0;
-
-      @media (width >=600px) {
-        left: -40px;
-      }
 
       &::before {
         display: block;

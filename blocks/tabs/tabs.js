@@ -28,7 +28,7 @@ export default async function decorate(block) {
     }
     const picture = tabpanel.querySelector('picture');
     if (picture) {
-      picture.parentNode.className = 'tab-picture';
+      picture.parentNode.parentNode.className = 'tab-picture';
     }
 
     // build tab button
