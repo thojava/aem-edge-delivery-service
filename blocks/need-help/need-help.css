@@ -9,6 +9,7 @@
 
 .need-help {
   border-bottom: 1px solid #2e333d;
+
   &> div {
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@
     &> div:last-child {
       display: flex;
       align-items: center;
+
       &::before {
         content: "";
         display: block;
@@ -69,6 +71,7 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: 20px;
+    
     @media (width >= 900px) {
       font-size: 30px;
       font-family: unset;

@@ -41,6 +41,20 @@
   margin-bottom: 12px;
 }
 
+.form textarea {
+  resize: vertical;
+}
+
+
+
+.form .field-wrapper > label {
+  order: -1;
+}
+
+.form .selection-wrapper label {
+  margin-bottom: 0;
+}
+
 .form input,
 .form select,
 .form textarea {
@@ -60,8 +74,10 @@
     outline: none;
     border-color: white;
   }
+
   &[type='checkbox'] {
     height: 20px;
+
     + label {
       color: var(--text-color);
       font-family: var(--body-font-family);
@@ -69,17 +85,11 @@
   }
 }
 
-.form textarea {
-  resize: vertical;
-}
-
 .form .selection-wrapper input {
   width: 16px;
 }
 
-.form .selection-wrapper label {
-  margin-bottom: 0;
-}
+
 
 .form .button {
   width: 100%;
@@ -94,10 +104,6 @@
   grid-auto-flow: column;
   justify-content: start;
   gap: 16px;
-}
-
-.form .field-wrapper > label {
-  order: -1;
 }
 
 .form .field-wrapper.selection-wrapper > label {

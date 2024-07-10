@@ -97,7 +97,6 @@ const createSelect = async (fd) => {
         value: opt.trim().toLowerCase(),
       }));
     }
-    console.log(options);
     options.forEach((opt) => addOption(opt));
   }
 
