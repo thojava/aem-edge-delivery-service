@@ -13,6 +13,10 @@
   grid-auto-flow: row;
   align-items: center;
   padding: 8px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 .form fieldset {
@@ -62,7 +66,6 @@
   font-size: 16px;
   font-weight: 500;
   width: 100%;
-  max-width: 50rem;
   display: block;
   padding: 20px 0;
   border: 0;

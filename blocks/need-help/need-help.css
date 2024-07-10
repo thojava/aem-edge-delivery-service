@@ -1,3 +1,7 @@
+.section.need-help-container {
+  padding-top: 0;
+}
+
 .need-help-wrapper {
   color: white;
   padding-bottom: 56px;
@@ -7,8 +11,9 @@
   }
 }
 
-.need-help {
+.need-help {  
   border-bottom: 1px solid #2e333d;
+  padding-bottom: 56px;
 
   &> div {
     display: flex;
@@ -42,11 +47,14 @@
     margin-bottom: 0;
     display: inline;
     padding: 0 32px;
+    margin-top: 0;
 
     @media (width >=900px) {
       font-size: 95px;
       font-weight: 800;
       line-height: 140px;
+      margin-bottom: -60px;
+      display: block;
     }
   }
 
@@ -65,13 +73,17 @@
     line-height: 24px;
     color: var(--text-color);
     margin-bottom: 48px;
+    
+    @media (width >= 900px) {
+      margin-bottom: 0;
+    }
   }
 
   h4 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 20px;
-    
+
     @media (width >= 900px) {
       font-size: 30px;
       font-family: unset;

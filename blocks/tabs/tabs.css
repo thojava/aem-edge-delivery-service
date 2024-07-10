@@ -2,8 +2,8 @@
   color: white;
 
   h2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
     margin: 0 0 20px;
 
     @media (width >=900px) {
@@ -21,6 +21,12 @@
     margin-bottom: 48px;
     text-align: center;
 
+    @media (width >=900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     h3 {
       font-size: 40px;
       font-weight: 800;
@@ -35,8 +41,10 @@
 
       @media (width >=900px) {
         font-size: 95px;
-        font-weight: 400;
+        font-weight: 800;
         line-height: 140px;
+        margin-bottom: -60px;
+        margin-top: 0;
       }
     }
 
@@ -66,6 +74,7 @@
 
   @media (width >=900px) {
     padding: 0 70px;
+    padding-bottom: 70px;
   }
 }
 

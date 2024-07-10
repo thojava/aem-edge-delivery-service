@@ -1,0 +1,49 @@
+.section > div.contact-wrapper {
+  @media (width >=900px) {
+    padding: 0 70px;
+    margin-top: 24px;
+  }
+}
+
+.contact {
+  &> div {
+    @media (width >= 900px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+  
+  &> div > div {
+    margin-bottom: 24px;
+
+    @media (width >= 900px) {
+      margin-bottom: unset;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-top: 0;
+
+    @media (width >= 900px) {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .icon {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  padding-bottom: 130px;
+}
