@@ -48,7 +48,7 @@
   font-family: var(--body-font-family);
   size-adjust: 100.06%;
   ascent-override: 95%;
-  src: local('Arial');
+  src: local('Inter');
 }
 
 @media (width >= 900px) {
