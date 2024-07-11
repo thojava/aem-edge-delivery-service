@@ -10,12 +10,15 @@ header .nav-wrapper {
 
 header nav .nav-sections .button-container {
   position: absolute;
-  bottom: 0;
-  padding-bottom: 40px;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @media (width >= 900px) {
     right: 80px;
     top: 30px;
+    transform: unset;
+    left: unset;
   }
 }
 
@@ -25,7 +28,9 @@ header .nav-wrapper.header-active {
   background-color: #111722;
 
   .button-container {
-    top: 15px;
+    @media (width >= 900px) {
+      top: 15px;
+    }
   }
 }
 
@@ -94,7 +99,7 @@ header nav .nav-hamburger {
   align-items: center;
   position: absolute;
   right: 20px;
-  top: 48px;
+  top: 40px;
 }
 
 header nav .nav-hamburger button {
@@ -103,8 +108,8 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
+  background-color: transparent;
+  color: white;
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -261,7 +266,7 @@ header nav .nav-sections .nav-drop::after {
   display: inline-block;
   position: absolute;
   top: 0.5em;
-  right: -15px;
+  right: 30px;
   transform: rotate(135deg);
   width: 6px;
   height: 6px;
