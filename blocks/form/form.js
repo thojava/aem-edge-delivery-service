@@ -1,7 +1,7 @@
 import createField from './form-fields.js';
 import { sampleRUM } from '../../scripts/aem.js';
 
-async function createForm(formHref) {
+async function createForm(formHref, postHref) {
   const { pathname } = new URL(formHref);
   const resp = await fetch(pathname);
   const json = await resp.json();
@@ -9,6 +9,7 @@ async function createForm(formHref) {
   const form = document.createElement('form');
   // eslint-disable-next-line prefer-destructuring
   form.dataset.action = pathname.split('.json')[0];
+  form.dataset.action = postHref;
 
   const fields = await Promise.all(json.data.map((fd) => createField(fd, form)));
   fields.forEach((field) => {
@@ -86,10 +87,11 @@ async function handleSubmit(form) {
 }
 
 export default async function decorate(block) {
-  const formLink = block.querySelector('a[href$=".json"]');
+  const formLink = block.querySelectorAll('a')[0];
+  const postLink = block.querySelectorAll('a')[1];
   if (!formLink) return;
 
-  const form = await createForm(formLink.href);
+  const form = await createForm(formLink.href, postLink.href);
   block.replaceChildren(form);
 
   form.addEventListener('submit', (e) => {

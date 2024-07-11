@@ -114,7 +114,7 @@
       "Type": "confirmation",
       "Label": "",
       "Placeholder": "",
-      "Value": "https://main--helix-block-collection--adobe.hlx.live/block-collection/form-thank-you",
+      "Value": "http://localhost:3000/contact-form-thank-you",
       "Options": "",
       "Mandatory": "",
       "Style": "",
