@@ -37,6 +37,18 @@
         }
     }
 
+    h2 {
+        line-height: 50px;
+        min-height: calc(50px * 3  +  110px);
+        
+        @media (width >=900px) {
+            font-size: 47px;
+            line-height: 60px;
+            min-height: calc(60px * 3  +  75px);
+            margin-right: -100px;
+        }
+    }
+
     .button-container {
         display: flex;
         justify-content: center;
@@ -69,7 +81,6 @@
 
 .teaser-description {
     font-size: 16px;
-    font-weight: 700;
     color: #79808a;
     margin-bottom: 48px;
     margin-top: 0;
