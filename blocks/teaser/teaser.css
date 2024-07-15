@@ -39,12 +39,12 @@
 
     h2 {
         line-height: 50px;
-        min-height: calc(50px * 3  +  110px);
+        min-height: calc(50px * 3 + 110px);
         
         @media (width >=900px) {
             font-size: 47px;
             line-height: 60px;
-            min-height: calc(60px * 3  +  75px);
+            min-height: calc(60px * 3 + 75px);
             margin-right: -100px;
         }
     }
