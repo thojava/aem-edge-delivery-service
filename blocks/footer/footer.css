@@ -9,6 +9,11 @@ footer {
     padding-left: var(--section-padding-left-right);
     padding-right: var(--section-padding-left-right);
   }
+  
+  img {
+    height: 70px;
+    width: auto;
+  }
 }
 
 footer a:any-link {
