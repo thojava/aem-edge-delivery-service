@@ -1,7 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 footer {
   padding: 0 1rem;
-  background-color: #111722;
+  background-color: var(--background-color);
   font-size: 16px;
   color: #79808a;
 
@@ -57,7 +57,7 @@ footer .section .default-content-wrapper > ul {
 }
 
 footer .section .default-content-wrapper > ul > li {
-  color: #fff;
+  color: --var(--text-color);
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 24px;
@@ -87,11 +87,11 @@ footer .section .default-content-wrapper > ul > li > ul > li {
 
   a {
     &[href^='tel\:'] {
-      color: white;
+      color: --var(--text-color);
     }
 
     &[href^='mailto\:'] {
-      color: white;
+      color: --var(--text-color);
     }
   }
 

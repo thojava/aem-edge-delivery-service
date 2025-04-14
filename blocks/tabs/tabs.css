@@ -1,5 +1,5 @@
 .tabs-container {
-  color: white;
+  color: --var(--text-color);
 
   h2 {
     font-size: 30px;

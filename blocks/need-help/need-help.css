@@ -3,7 +3,7 @@
 }
 
 .need-help-wrapper {
-  color: white;
+  color: --var(--text-color);
   padding-bottom: 56px;
 
   @media (width >=900px) {
@@ -12,7 +12,7 @@
 }
 
 .need-help {  
-  border-bottom: 1px solid #2e333d;
+  border-bottom: 1px solid --var(--text-color);
   padding-bottom: 56px;
 
   &> div {
@@ -27,7 +27,7 @@
       &::before {
         content: "";
         display: block;
-        background-color: white;
+        background-color: black;
         height: 4px;
         width: 100%;
         max-width: 200px;

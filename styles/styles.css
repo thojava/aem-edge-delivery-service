@@ -14,10 +14,10 @@
   /* colors */
   --link-color: #4A6CF7;
   --link-hover-color: #136ff6;
-  --background-color: #111722;
+  --background-color: #f4f4f4;
   --light-color: #eee;
   --dark-color: #ccc;
-  --text-color: #79808a;
+  --text-color: black;
 
   /* fonts */
   --body-font-family: 'Inter', sans-serif;

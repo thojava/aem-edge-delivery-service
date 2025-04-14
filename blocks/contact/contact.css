@@ -25,7 +25,7 @@
   h3 {
     font-size: 16px;
     font-weight: 400;
-    color: white;
+    color: var(--text-color);
     margin-top: 0;
 
     @media (width >= 900px) {

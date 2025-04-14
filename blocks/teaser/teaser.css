@@ -1,5 +1,5 @@
 .teaser-container {
-    background-color: #27314e;
+    background-color: --var(--background-color);
     display: flex;
 }
 
@@ -14,7 +14,6 @@
 
 .teaser-content {
     width: 100%;
-    color: white;
     margin-right: 60px;
     text-align: center;
 
@@ -60,7 +59,7 @@
 }
 
 .teaser-headline {
-    background-color: #ffffff10;
+    background-color: color-mix(in srgb, var(--link-color) 90%, white 40%);
     padding: 10px 20px 10px 36px;
     border-radius: 9999px;
     position: relative;
@@ -81,7 +80,7 @@
 
 .teaser-description {
     font-size: 16px;
-    color: #79808a;
+    color: --var(--text-color);
     margin-bottom: 48px;
     margin-top: 0;
 }
