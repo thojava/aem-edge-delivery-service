@@ -5,7 +5,7 @@
 }
 
 .form {
-  color: color: var(--text-color);;
+  color: var(--text-color);
 }
 
 .form .field-wrapper {
