@@ -16,7 +16,7 @@ header nav .nav-sections .button-container {
 
   @media (width >= 900px) {
     right: 80px;
-    top: 30px;
+    top: 20px;
     transform: unset;
     left: unset;
   }
@@ -379,7 +379,7 @@ header nav .nav-sections .nav-drop[aria-expanded='false'] > ul {
   }
 
   header nav .nav-sections ul > li:hover {
-    color: #fff;
+    color: var(--link-hover-color);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {

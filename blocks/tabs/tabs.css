@@ -113,10 +113,12 @@
 
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom-color: var(--link-color);
+  border-bottom-width: 3px;
 }
 
 .tabs .tabs-list button:hover {
   border-bottom-color: var(--link-color);
+  border-bottom-width: 3px;
 }
 
 .tabs .tabs-panel {
