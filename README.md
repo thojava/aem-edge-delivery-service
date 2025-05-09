@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--haisaiwebsite--lukehaisai.hlx.page/
-- Live: https://main--haisaiwebsite--lukehaisai.hlx.live/
+- Preview: https://main--aem-edge-delivery-service--thojava.hlx.page/
+- Live: https://main--aem-edge-delivery-service--thojava.hlx.live/
 
 ## Installation
 

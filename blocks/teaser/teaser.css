@@ -3,12 +3,34 @@
     display: flex;
 }
 
-.teaser>div {
+.teaser > div {
     display: flex;
     flex-direction: column;
 
     @media (width >=900px) {
         flex-direction: row;
+    }
+}
+
+h2 {
+    .teaser-headline,
+    .teaser-cta {
+        background-color: color-mix(in srgb, var(--link-color) 90%, white 40%);
+        padding: 10px 20px 10px 36px;
+        border-radius: 9999px;
+        position: relative;
+        bottom: 32px;
+        font-size: 18px;
+        margin-right: 10px;
+        width: 150px;
+
+        & > .icon img {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            position: absolute;
+            margin-top: 6px;
+        }
     }
 }
 
@@ -37,9 +59,16 @@
     }
 
     h2 {
-        line-height: 50px;
         min-height: calc(50px * 3 + 110px);
-        
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+
+        br {
+            display: none
+        }
+
         @media (width >=900px) {
             font-size: 47px;
             line-height: 60px;
@@ -58,24 +87,16 @@
     }
 }
 
-.teaser-headline {
-    background-color: color-mix(in srgb, var(--link-color) 90%, white 40%);
-    padding: 10px 20px 10px 36px;
-    border-radius: 9999px;
-    position: relative;
-    bottom: 32px;
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 0.5rem;
-        height: 0.5rem;
-        background-color: var(--link-color);
-        border-radius: 50%;
-        top: 16px;
-        left: 16px;
-    }
+.teaser-headline::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--link-color);
+    border-radius: 50%;
+    top: 16px;
+    left: 16px;
 }
 
 .teaser-description {
@@ -116,7 +137,7 @@
                 &::before {
                     display: block;
                     position: absolute;
-                    content: "";
+                    content: '';
                     width: 350px;
                     height: 420px;
                     left: 20px;
@@ -129,8 +150,8 @@
 
                 @media (width >=768px) {
                     &::after {
-                        content: "";
-                        background: url("/icons/ball.svg");
+                        content: '';
+                        background: url('/icons/ball.svg');
                         opacity: 0.9;
                         width: 120px;
                         height: 120px;

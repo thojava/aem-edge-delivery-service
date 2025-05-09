@@ -108,7 +108,7 @@ header nav .nav-hamburger button {
   border-radius: 0;
   padding: 0;
   background-color: transparent;
-  color: white;
+  color: var(--primary-color);
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -238,7 +238,7 @@ header nav .nav-sections .default-content-wrapper {
 }
 
 header nav .nav-sections ul > li:hover {
-  color: #fff;
+  color: var(--link-hover-color);
 }
 
 header .nav-wrapper .nav-tools ul > li:first-child {
